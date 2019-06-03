@@ -4,8 +4,10 @@ import AppRenderProps from "./RenderProps/App";
 import AppFunctionChildren from "./FunctionAsChildren/App";
 import AppHighOrderComponents from "./HighOrderComponents/App";
 import AppContainerPresentionalComponents from "./ContainerPresentationalComponents/App";
+import AppCustomHooks from "./CustomHooks/App";
 
 // render(<AppRenderProps />, document.getElementById("root"));
 // render(<AppFunctionChildren />, document.getElementById("root"));
 // render(<AppHighOrderComponents />, document.getElementById("root"));
-render(<AppContainerPresentionalComponents />, document.getElementById("root"));
+// render(<AppContainerPresentionalComponents />, document.getElementById("root"));
+render(<AppCustomHooks />, document.getElementById("root"));
