@@ -5,22 +5,22 @@ function withVisibility(Component) {
     const [state, setState] = React.useState(true);
 
     React.useEffect(() => {
-      const handleVisibility = () => {
+      function handleVisibility(event) {
         if (document.hidden) {
-          setState(false);
           console.log("Page is not visible");
+          setState(false);
         } else {
-          setState(true);
           console.log("Page is visible");
+          setState(true);
         }
-      };
+      }
       document.addEventListener("visibilitychange", handleVisibility);
       return () => {
         window.removeEventListener("visibilitychange", handleVisibility);
       };
     }, [setState]);
 
-    return <Component children={state} />;
+    return <Component state={state} />;
   }
   return Visibility;
 }

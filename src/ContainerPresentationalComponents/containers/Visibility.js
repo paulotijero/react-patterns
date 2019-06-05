@@ -1,20 +1,20 @@
 import React from "react";
 
-import Visibility from "../components/Visibility";
+import Visibility from "../presentational/Visibility";
 
-function VisibilityContainer() {
+function VisibilityPresentational() {
   const [state, setState] = React.useState(true);
 
   React.useEffect(() => {
-    const handleVisibility = () => {
+    function handleVisibility(event) {
       if (document.hidden) {
-        setState(false);
         console.log("Page is not visible");
+        setState(false);
       } else {
-        setState(true);
         console.log("Page is visible");
+        setState(true);
       }
-    };
+    }
     document.addEventListener("visibilitychange", handleVisibility);
     return () => {
       window.removeEventListener("visibilitychange", handleVisibility);
@@ -24,4 +24,4 @@ function VisibilityContainer() {
   return <Visibility state={state} />;
 }
 
-export default VisibilityContainer;
+export default VisibilityPresentational;

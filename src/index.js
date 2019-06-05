@@ -9,5 +9,5 @@ import AppCustomHooks from "./CustomHooks/App";
 // render(<AppRenderProps />, document.getElementById("root"));
 // render(<AppFunctionChildren />, document.getElementById("root"));
 // render(<AppHighOrderComponents />, document.getElementById("root"));
-// render(<AppContainerPresentionalComponents />, document.getElementById("root"));
-render(<AppCustomHooks />, document.getElementById("root"));
+render(<AppContainerPresentionalComponents />, document.getElementById("root"));
+// render(<AppCustomHooks />, document.getElementById("root"));

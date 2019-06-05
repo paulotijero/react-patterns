@@ -6,11 +6,11 @@ function Visibility({ render }) {
   React.useEffect(() => {
     const handleVisibility = () => {
       if (document.hidden) {
-        setState(false);
         console.log("Page is not visible");
+        setState(false);
       } else {
-        setState(true);
         console.log("Page is visible");
+        setState(true);
       }
     };
     document.addEventListener("visibilitychange", handleVisibility);
