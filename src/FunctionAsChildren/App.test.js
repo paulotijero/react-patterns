@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 
 import App from "./App";
 
-test("Custom Hook Patter", () => {
+test("Function as Children Patter", () => {
   const { asFragment } = render(<App />);
   expect(asFragment()).toMatchSnapshot();
 });

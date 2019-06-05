@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 
 import Visibility from "./Visibility";
 
-test("Custom Hook Patter", () => {
+test("Presentational and Container Components Patter", () => {
   const { asFragment } = render(<Visibility state={true} />);
   expect(asFragment()).toMatchSnapshot();
 });
